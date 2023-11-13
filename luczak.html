@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/3e7f569ffe.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <header class="d-flex flex-wrap border shadow pt-2 m-4">
+      <div class="w-100 d-flex justify-content-between">
+        <img src="logoZSTI2.jpg" alt="logo" />
+        <h3>
+          Zespół Szkół Techniczno-Informatycznych
+          <span class="fs-5">w Gliwicach</span>
+        </h3>
+        <div>
+          <button class="btn bg-primary text-white">Home</button>
+          <button class="btn text-primary">About</button>
+        </div>
+      </div>
+      <div class="w-100 d-flex justify-content-center flex-wrap">
+        <hr class="w-100" />
+        <h1>Zadania do wykonania</h1>
+      </div>
+    </header>
+    <main class="d-flex border m-4">
+      <div class="container border m-3">
+        <div class="border p-4 m-3">
+          <form class="d-flex flex-column">
+            <h3>Dodawanie zadania</h3>
+            <label class="form-label" for="jeden"
+              >Nazwa zadania<input id="jeden" class="form-control"
+            /></label>
+            <label class="form-label" for="dwa"
+              >Kategoria zadania<select class="form-select" id="dwa">
+                <option selected>dom</option>
+                <option>One</option>
+                <option>Two</option>
+                <option>Three</option>
+              </select>
+            </label>
+            <button class="btn bg-success text-white">
+              Dodaj zadanie
+              <i class="fa-regular fa-square-plus" style="color: #ffffff"></i>
+            </button>
+          </form>
+        </div>
+        <div class="border p-4 m-3 border-warning">
+          <form class="d-flex flex-column">
+            <h3 class="d-flex justify-content-center">Edycja zadania</h3>
+            <label class="form-label" for="trzy"
+              >Nazwa zadania<input id="trzy" class="form-control"
+            /></label>
+            <label class="form-label" for="cztery"
+              >Kategoria zadania<select class="form-select" id="cztery">
+                <option selected>dom</option>
+                <option>One</option>
+                <option>Two</option>
+                <option>Three</option>
+              </select>
+            </label>
+            <button class="btn bg-primary text-white">
+              Zapisz zadanie
+              <i class="fa-regular fa-floppy-disk" style="color: #ffffff"></i>
+            </button>
+            <div><input type="checkbox" />zrobione</div>
+          </form>
+        </div>
+      </div>
+      <div class="container border m-3">
+        <h2 class="d-flex justify-content-center fw-bold">Lista zadań</h2>
+        <div class="border border-danger p-3 m-4">
+          <h2 class="text-danger">Do zrobienia</h2>
+          <ol class="list-group list-group-numbered">
+            <li class="list-group-item d-flex">
+              <p class="w-50">&nbsp; A list item</p>
+              <div class="w-50">
+                <label for="piec"
+                  >hobby<button class="btn bg-warning" id="piec">
+                    <i
+                      class="fa-solid fa-check"
+                      style="color: #ffffff"
+                    ></i></button
+                ></label>
+                <button class="btn bg-secondary">
+                  <i
+                    class="fa-solid fa-pen-to-square"
+                    style="color: #ffffff"
+                  ></i></button
+                ><button class="btn bg-primary">
+                  <i
+                    class="fa-solid fa-floppy-disk"
+                    style="color: #ffffff"
+                  ></i></button
+                ><button class="btn bg-danger">
+                  <i class="fa-solid fa-trash" style="color: #ffffff"></i>
+                </button>
+              </div>
+            </li>
+            <li class="list-group-item d-flex">
+              <p class="w-50">&nbsp; A list item</p>
+              <div class="w-50">
+                <label for="szesc"
+                  >hobby<button class="btn bg-warning" id="szesc">
+                    <i
+                      class="fa-solid fa-check"
+                      style="color: #ffffff"
+                    ></i></button
+                ></label>
+                <button class="btn bg-secondary">
+                  <i
+                    class="fa-solid fa-pen-to-square"
+                    style="color: #ffffff"
+                  ></i></button
+                ><button class="btn bg-primary">
+                  <i
+                    class="fa-solid fa-floppy-disk"
+                    style="color: #ffffff"
+                  ></i></button
+                ><button class="btn bg-danger">
+                  <i class="fa-solid fa-trash" style="color: #ffffff"></i>
+                </button>
+              </div>
+            </li>
+            <li class="list-group-item d-flex">
+              <p class="w-50">&nbsp; A list item</p>
+              <div class="w-50">
+                <label for="siedem"
+                  >hobby<button class="btn bg-warning" id="siedem">
+                    <i
+                      class="fa-solid fa-check"
+                      style="color: #ffffff"
+                    ></i></button
+                ></label>
+                <button class="btn bg-secondary">
+                  <i
+                    class="fa-solid fa-pen-to-square"
+                    style="color: #ffffff"
+                  ></i></button
+                ><button class="btn bg-primary">
+                  <i
+                    class="fa-solid fa-floppy-disk"
+                    style="color: #ffffff"
+                  ></i></button
+                ><button class="btn bg-danger">
+                  <i class="fa-solid fa-trash" style="color: #ffffff"></i>
+                </button>
+              </div>
+            </li>
+          </ol>
+        </div>
+        <div class="border border-success p-3 m-4">
+          <h2 class="text-success">Zrobione</h2>
+          <ol class="list-group list-group-numbered">
+            <li class="list-group-item d-flex bg-secondary">
+              <p class="w-50 text-decoration-line-through text-white">
+                &nbsp; A list item
+              </p>
+              <div class="w-50">
+                <label for="osiem" class="text-white"
+                  >hobby<button class="btn bg-success" id="osiem">
+                    <i
+                      class="fa-solid fa-check"
+                      style="color: #ffffff"
+                    ></i></button
+                ></label>
+                <button class="btn bg-secondary border">
+                  <i
+                    class="fa-solid fa-pen-to-square"
+                    style="color: #ffffff"
+                  ></i></button
+                ><button class="btn bg-primary">
+                  <i
+                    class="fa-solid fa-floppy-disk"
+                    style="color: #ffffff"
+                  ></i></button
+                ><button class="btn bg-danger">
+                  <i class="fa-solid fa-trash" style="color: #ffffff"></i>
+                </button>
+              </div>
+            </li>
+            <li class="list-group-item d-flex bg-secondary">
+              <p class="w-50 text-decoration-line-through text-white">
+                &nbsp; A list item
+              </p>
+              <div class="w-50">
+                <label for="dziewiec" class="text-white"
+                  >hobby<button class="btn bg-success" id="dziewiec">
+                    <i
+                      class="fa-solid fa-check"
+                      style="color: #ffffff"
+                    ></i></button
+                ></label>
+                <button class="btn bg-secondary border">
+                  <i
+                    class="fa-solid fa-pen-to-square"
+                    style="color: #ffffff"
+                  ></i></button
+                ><button class="btn bg-primary">
+                  <i
+                    class="fa-solid fa-floppy-disk"
+                    style="color: #ffffff"
+                  ></i></button
+                ><button class="btn bg-danger">
+                  <i class="fa-solid fa-trash" style="color: #ffffff"></i>
+                </button>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </main>
+    <footer class="shadow d-flex justify-content-center p-3">
+      ©Błażej Łuczak
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
