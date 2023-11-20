@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Przygotowanie</title>
+</head>
+<body>
+    <script src="main.js">
+        // Jaka funkcja tablicowa pozwala nam posortować tablice od najmniejszej do największej wartości?
+
+
+        // odp. sort()
+
+        //-----------------------------------------------------------------------------------------------------------------------------------------------
+
+        // Tekst : string = "pierwsza część  - druga część jak" jak za pomocą splity sprawić żeby w stringu tekst została tylko treść "pierwsza część"
+
+
+        // let text = "pierwsza część - druga część jak";
+        // let splittedText = text.split('-');
+
+        // let result = splittedText[0].trim();
+
+        // console.log(result);
+
+        //-----------------------------------------------------------------------------------------------------------------------------------------------
+
+        // Przypisz do zmiennej swoje imię i rozprosz je przy pomocy operatora spread a wynik wyświetl w konsoli
+
+
+        // let imie = "Kuba";
+
+        // let rozproszoneImie = [...imie];
+
+        // console.log(rozproszoneImie);
+
+        //-----------------------------------------------------------------------------------------------------------------------------------------------
+
+        // Jak działa metoda shift()? 
+
+
+        // odp. Usuwa pierwszy element z tablicy
+
+        //-----------------------------------------------------------------------------------------------------------------------------------------------
+
+        // Co umożliwia metoda apply()?
+
+
+        // odp. Umożliwa przekazywanie argumentów
+
+        //-----------------------------------------------------------------------------------------------------------------------------------------------
+
+        // Stwórz tablicę z 6 losowymi zwierzakami. Napisz funkcję showArray(arr), która wypisze kolejne elementy przekazanej tablicy. Zrób to na dwa sposoby za pomocą pętli for, metody forEach. Dodatkowo wypisz długość każdego słowa a na końcu sumę wszystkich liter występujących w tablicy.
+
+
+        // let zwierzaki = ['kot', 'pies', 'słoń', 'kangur', 'jeleń', 'żyrafa'];
+
+        // function zwierzaki_For(arr) {
+        //     console.log("Wypisywanie za pomocą pętli for:");
+        //     for (let i = 0; i < arr.length; i++) {
+        //       console.log(arr[i]);
+        
+        //       console.log(`Długość słowa: ${arr[i].length}`);
+        //     }
+
+        //     let sumaLiter = 0;
+        //     for (let i = 0; i < arr.length; i++) {
+        //       sumaLiter += arr[i].length;
+        //     }
+
+        //     console.log(`Suma liter we wszystkich słowach: ${sumaLiter}`);
+        // }
+
+        // function zwierzaki_ForEach(arr) {
+        //     let sumaLiter = 0;
+        //     console.log("Wypisywanie za pomocą metody forEach:");
+        //     arr.forEach(function(element) 
+        //     {
+        //         console.log(`Słowo: ${element}, Długość: ${element.length}`);
+        //         sumaLiter += element.length;
+        //     });
+
+        //     console.log(`Suma liter: ${sumaLiter}`);
+        // }
+
+        // zwierzaki_For(zwierzaki);
+        // console.log("\n"); 
+        // zwierzaki_ForEach(zwierzaki);
+
+        //-----------------------------------------------------------------------------------------------------------------------------------------------
+
+        // Czym są funkcje strzałkowe?
+
+
+        // odp. Funkcje strzałkowe w JavaScript to skrócona składnia do definiowania funkcji, charakteryzująca się brakiem własnego kontekstu `this` i zwięzłością składni.
+
+        //-----------------------------------------------------------------------------------------------------------------------------------------------
+
+        // Utwórz tablicę "animlas" zawierającą 3 elementy. Za pomocą przeznaczonej do tego funkcji, dodaj element na początku tablicy i ją wyświetl.
+
+
+        // let animals = ['kot', 'pies', 'słoń'];
+
+        // animals.unshift('żółw');
+        // console.log(animals);
+
+        //-----------------------------------------------------------------------------------------------------------------------------------------------
+
+        // Czym jest operator "..."?
+
+
+        // odp. Rozpraszanie większych struktur na mniejsze
+
+        //-----------------------------------------------------------------------------------------------------------------------------------------------
+
+        // Napisz funkcję przyjmującą dowolną ilość liczb jako argumenty funkcji i obliczającą ich średnią
+
+        // function obliczSrednia(...liczby) {
+        //     if (liczby.length === 0) {
+        //       return 0;
+        //     }
+        
+        //     const suma = liczby.reduce((acc, num) => acc + num, 0);
+        //     const srednia = suma / liczby.length;
+        
+        //     return srednia;
+        //   }
+
+        // console.log(obliczSrednia(2, 4, 6)); 
+        // console.log(obliczSrednia(10, 5, 8, 12, 7));
+        // console.log(obliczSrednia());
+
+        //-----------------------------------------------------------------------------------------------------------------------------------------------
+
+        // Wymień 3 metody tablicowe JS
+
+
+        // odp. sort(), shift(), push()
+
+
+        //-----------------------------------------------------------------------------------------------------------------------------------------------
+
+        // Do tablicy zwierzęta dodaj na koniec jedno zwierze i usuń zwierze z początku
+        //let zwierzeta = ['Cat', 'Dog','Rabbit','Hamster']
+
+
+        // let zwierzeta = ['Cat', 'Dog', 'Rabbit', 'Hamster'];
+
+        // zwierzeta.push('Bird');
+
+        // let usunieteZwierze = zwierzeta.shift();
+
+        // console.log(zwierzeta); 
+        // console.log(usunieteZwierze);
+
+        //-----------------------------------------------------------------------------------------------------------------------------------------------
+
+        // Jak działa metoda tablicowa unshift()?
+
+
+        // odp. Dodaje element na początek tablicy
+
+        //-----------------------------------------------------------------------------------------------------------------------------------------------
+
+        // Skopiuj tablice tab1 =[1, 2,3,4,5], używając przy tym destrukturyzacji 
+
+
+        // let tab1 = [1, 2, 3, 4, 5];
+        // let tab2 = [...tab1];
+
+        // console.log(tab2);
+
+        //-----------------------------------------------------------------------------------------------------------------------------------------------
+
+        // Jakiego słowa używamy do deklaracji funkcji asynchronicznej?
+
+
+        // odp. async()
+
+        //-----------------------------------------------------------------------------------------------------------------------------------------------
+
+        // Napisz funkcje znajdującą największą liczbę w tablicy. Użyj operatora ...
+
+        // function znajdzNajwiekszaLiczbe(tablica) 
+        // {
+        //     return Math.max(...tablica);
+        // }
+        
+        // let mojaTablica = [1, 8, 3, 10, 5];
+        // let najwiekszaLiczba = znajdzNajwiekszaLiczbe(mojaTablica);
+
+        // console.log("Największa liczba to:", najwiekszaLiczba);
+
+        //-----------------------------------------------------------------------------------------------------------------------------------------------
+
+        // Posortuj tablicę malejąco
+        // const array = [5, 12, 88, 32, 50, 10, 2, 1, 55, 3];
+
+        // const array = [5, 12, 88, 32, 50, 10, 2, 1, 55, 3];
+        // array.sort((a, b) => b - a);
+        // console.log(array);
+
+        //-----------------------------------------------------------------------------------------------------------------------------------------------
+
+        // Do czego służy metoda pop()?
+
+
+        // odp. Metoda pop() służy do usuwania ostatniego elementu z końca tablicy i zwracania tego elementu.
+
+        //-----------------------------------------------------------------------------------------------------------------------------------------------
+
+        // Co robi metoda map() w JavaScript?
+        
+
+        // odp Metoda map() w JavaScript służy do przekształcania każdego elementu tablicy za pomocą dostarczonej funkcji, tworząc nową tablicę z wynikami tych przekształceń.
+
+        //-----------------------------------------------------------------------------------------------------------------------------------------------
+
+        // Zwróć 3 ostatnie elementy tablicy
+        // const array = [2,1,3,7,4,2,0,6,9]; 
+
+
+        // const array = [2, 1, 3, 7, 4, 2, 0, 6, 9];
+
+        // const ostatnieTrzyElementy = array.slice(-3);
+
+        // console.log(ostatnieTrzyElementy);
+
+        //-----------------------------------------------------------------------------------------------------------------------------------------------
+
+        // Czym różnią się metody tablicowe mutujące od niemutujących w javascript?
+
+
+        // odp. Metody tablicowe mutujące w JavaScript zmieniają oryginalną tablicę, podczas gdy metody niemutujące zwracają nową tablicę bez modyfikacji oryginału. Przykłady mutujących to push(), pop(), splice(), a niemutujących to map(), filter(), slice().
+
+        //-----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+        // Używając metody filter zwróć tabllice z liczbami podzielnymi przez 3.
+        // const array = [1, 3, 5, 6, 12, 44, 15, 77]
+
+        // const array = [1, 3, 5, 6, 12, 44, 15, 77];
+
+        // const podzielnePrzez3 = array.filter(function(liczba) 
+        // {
+        //   return liczba % 3 === 0;
+        // });
+
+        // console.log(podzielnePrzez3);
+
+        //-----------------------------------------------------------------------------------------------------------------------------------------------
+
+        // Do czego służy metoda splice()?
+
+
+        // odp. Metoda splice() w JavaScript służy do modyfikowania zawartości tablicy poprzez usuwanie lub dodawanie elementów na określonych pozycjach.
+
+        //-----------------------------------------------------------------------------------------------------------------------------------------------
+
+        // Do tablicy 4-elementowej dodaj na sam początek element 'zebra'
+
+        // var tablica = ['kot', 'pies', 'kaczka', 'kon'];
+
+        // tablica.unshift('zebra');
+        // console.log(tablica);
+
+    </script>
+</body>
+</html>
