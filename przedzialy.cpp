@@ -1,6 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <algorithm>
+#include <string>
 
 using namespace std;
 
@@ -14,6 +15,7 @@ public:
     int nieparzyste = 0;
     int pierwsze = 0;
     char znaklewy, znakprawy;
+    int wielkosc = 0;
 
     policzNieparzyste(){
 
@@ -86,6 +88,16 @@ int main()
 
         for(int i=przedzialy[licz].faktycznyPoczatek;i<=przedzialy[licz].faktycznyKoniec;i++){
             calyprzedzial[i+100]=1;
+
+            if((i==przedzialy[licz].faktycznyPoczatek&&przedzialy[licz].znaklewy=='(')){
+            calyprzedzial[i+100]=2;
+            }
+
+            else if(i==przedzialy[licz].faktycznyKoniec&&przedzialy[licz].znakprawy==')'){
+            calyprzedzial[i+100]=3;
+            }
+
+
         }
 
 
@@ -96,7 +108,7 @@ int main()
         sort(wartosciNiep,wartosciNiep+50);
         sort(wartosciPier,wartosciPier+50);
 
-        cout<<endl<<" najwiecej nieparzystych: "<<wartosciNiep[49]<<endl;
+        cout<<endl<<" najwiecej nieparzystych: "<<wartosciNiep[49]<<endl<<"w linijkach: "<<endl;
 
         for(int q=0;q<50;q++){
             if(przedzialy[q].nieparzyste==wartosciNiep[49]){
@@ -112,18 +124,69 @@ int main()
             }
         }
 
+        string wynik = "";
         for(int i=0;i<201;i++){
-            cout<<calyprzedzial[i];
+            wynik+=to_string(calyprzedzial[i]);
         }
 
+        cout<<endl<<"0 - brak w przedziale, 1 - w przedziale, 2 - lewy nawias, 3 - prawy nawias"<<endl;
+        cout<<"tabela: "<<wynik<<endl;
 
+        int maxdlugosc, dlugosc,endin, maxStart, maxEnd = 0;
+        char NewZnak1, NewZnak2;
+        int start = -100;
 
+        cout<<endl<<"PRZEDZIALY PO SUMIE: "<<endl;
+        for(int i=0;i<201;i++){
+            switch(calyprzedzial[i]){
+                case 1:
+                    if(calyprzedzial[i+1]==0||calyprzedzial[i+1]==2) {
+                            if(i==0){
+                                NewZnak1='<';
+                            }
 
+                            dlugosc+=1;
+                            endin = i-100;
+                            NewZnak2='>';
+                            if(dlugosc!=0){
+                                cout<<NewZnak1<<start<<","<<endin<<NewZnak2<<" dlugosc: "<<dlugosc<<endl;
+                            }
+                            dlugosc=0;
+                    }
+                    else if(calyprzedzial[i-1]==0||calyprzedzial[i-1]==3) {
+                            dlugosc+=1;
+                            start = i-100;
+                            NewZnak1='<';
+                    }
+                    else dlugosc+=1;
+                    break;
+                case 2:
+                    if(calyprzedzial[i-1]==0){
+                    NewZnak1='(';
+                    start=i-100;
+                    }
+                    else{
+                    endin = i-100;
+                    if(dlugosc!=0){
+                        cout<<NewZnak1<<start<<","<<endin<<NewZnak2<<" dlugosc: "<<dlugosc<<endl;
+                    }
+                    dlugosc=0;
+                    NewZnak1='(';
+                    start = i-100;
+                    }
 
+                    break;
+                case 3:
+                    NewZnak2=')';
+                    endin=i-100;
+                    if(dlugosc!=0){
+                        cout<<NewZnak1<<start<<","<<endin<<NewZnak2<<" dlugosc: "<<dlugosc<<endl;
+                    }
+                    dlugosc=0;
+                    break;
 
-
-
-
+            }
+        }
 
     return 0;
 }
