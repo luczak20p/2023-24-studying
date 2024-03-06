@@ -96,6 +96,22 @@ public class Start extends Frame {
             }
         });
 
+        btnUsun.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                bazaFigur.remove(ltFigury.getSelectedIndex());
+                ltFigury.remove(ltFigury.getSelectedItem());
+                //usunac jeszcze z bazy figur uzywajac indexow
+            }
+        });
+
+        btnDane.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                //bierzesz ktory row jest zaznaczony i wyswietlasz dane z tablicy o indexie danego rowa
+            }
+        });
+
 
     }
 
@@ -103,6 +119,10 @@ public class Start extends Frame {
         setEnabled(false);
         switch (selectedFigura){
             case "Kwadrat": oknoFigura = new OknoKwadrat("KWADRAT",this);
+            break;
+            case "Prostokąt": oknoFigura = new OknoProstokat("PROSTOKĄT",this);
+            break;
+            case "Koło": oknoFigura = new OknoKolo("KOŁO",this);
             default: setEnabled(true);
         }
     }
@@ -119,4 +139,6 @@ public class Start extends Frame {
         ltFigury.add(tmpFigura.getTyp()+":"+tmpFigura.getNazwa());
         setEnabled(true);
     }
+
+
 }

@@ -35,6 +35,9 @@ public class App {
 //            throw new RuntimeException(e);
 //        }
 
+
+        /// zrobić zapisywanie do pliku, czytanie z pliku i czytanie danych wybranego z listy elementu
+
         Start oknoStart = new Start("Figury", bazaFigur);
     }
 }
