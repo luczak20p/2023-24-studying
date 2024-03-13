@@ -8,6 +8,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.io.*;
 import java.util.ArrayList;
 
 public class Start extends Frame {
@@ -93,14 +94,21 @@ public class Start extends Frame {
         itmZapisz.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                dispose();
+            try {
+            ObjectOutputStream ouS = new ObjectOutputStream(new FileOutputStream("test.bin"));
+            ouS.writeObject(bazaFigur);
+            ouS.close();
+            } catch (IOException a) {
+            throw new RuntimeException(a);
+                }
             }
         });
 
         itmOdczyt.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                dispose();
+
+                odczyt();
             }
         });
 
@@ -120,7 +128,6 @@ public class Start extends Frame {
                 }catch(Exception a){
                     JOptionPane.showMessageDialog(null, "Nie ma jeszcze nic w liście");
                 }
-
             }
         });
 
@@ -171,6 +178,30 @@ public class Start extends Frame {
         oknoFigura.dispose();
         ltFigury.add(tmpFigura.getTyp()+":"+tmpFigura.getNazwa());
         setEnabled(true);
+    }
+
+    private void odczyt(){
+        ArrayList <Figura> bazaFigur2;
+        try {
+            ObjectInputStream inS = new ObjectInputStream(new FileInputStream("test.bin"));
+            bazaFigur2 = (ArrayList<Figura>) inS.readObject();
+            System.out.println(bazaFigur2.get(0));
+            bazaFigur.clear();
+            ltFigury.removeAll();
+
+            for(int i=0;i<bazaFigur2.size();i++){
+                ltFigury.add(bazaFigur2.get(i).getTyp()+":"+bazaFigur2.get(i).getNazwa());
+                bazaFigur.add(bazaFigur2.get(i));
+            }
+
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+
+        System.out.println(bazaFigur.size());
+
     }
 
 
